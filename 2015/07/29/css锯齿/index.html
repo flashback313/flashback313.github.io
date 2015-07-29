@@ -3,17 +3,37 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Flashback313</title>
+  <title>CSS锯齿 | Flashback313</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Flashback313">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="今天项目里碰到一个锯齿的样式。之前依稀在哪里见过css 写的锯齿，网上查了一下，好像中文资料还挺少的。所以就自己查了手册，自己捣鼓了一下。废话不多说，css 代码如下：
+div {
+    margin-top: 100px;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS锯齿">
+<meta property="og:url" content="http://yoursite.com/2015/07/29/css锯齿/index.html">
 <meta property="og:site_name" content="Flashback313">
-<meta property="og:description">
+<meta property="og:description" content="今天项目里碰到一个锯齿的样式。之前依稀在哪里见过css 写的锯齿，网上查了一下，好像中文资料还挺少的。所以就自己查了手册，自己捣鼓了一下。废话不多说，css 代码如下：
+div {
+    margin-top: 100px;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative">
+<meta property="og:image" content="http://yoursite.com/img/css_saw_tooth.jpg">
+<meta property="og:updated_time" content="2015-07-29T14:35:58.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Flashback313">
-<meta name="twitter:description">
+<meta name="twitter:title" content="CSS锯齿">
+<meta name="twitter:description" content="今天项目里碰到一个锯齿的样式。之前依稀在哪里见过css 写的锯齿，网上查了一下，好像中文资料还挺少的。所以就自己查了手册，自己捣鼓了一下。废话不多说，css 代码如下：
+div {
+    margin-top: 100px;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative">
   
     <link rel="alternative" href="/atom.xml" title="Flashback313" type="application/atom+xml">
   
@@ -59,9 +79,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-css锯齿" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-css锯齿" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/07/29/css锯齿/" class="article-date">
   <time datetime="2015-07-29T14:35:58.000Z" itemprop="datePublished">2015-07-29</time>
@@ -74,8 +92,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/29/css锯齿/">CSS锯齿</a>
+    <h1 class="article-title" itemprop="name">
+      CSS锯齿
     </h1>
   
 
@@ -122,54 +140,20 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-移动端页面的一点体会（一）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/06/08/移动端页面的一点体会（一）/" class="article-date">
-  <time datetime="2015-06-08T14:00:11.000Z" itemprop="datePublished">2015-06-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/06/08/移动端页面的一点体会（一）/">移动端页面的一点体会（一）</a>
-    </h1>
+    <a href="/2015/06/08/移动端页面的一点体会（一）/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">移动端页面的一点体会（一）</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>从学习前端开始其实就一直做移动端的页面多一些，写 css3 已经接触 html5 的也有一段时间了。于是乎，想写一点东西，算是自我总结。我希望能写一个系列出来，所以这一篇我先讲当下流行的 onepage 页面。</p>
-<p>所谓的 onepage 其实就是单页的上下翻页或者左右翻页。通常我们会使用把单页的内容放入一组 section 或者 div 里。通过 touch 事件的捕捉，然后对这些 section 做 translate3d 动画呈现出来。</p>
-<p>我的制作过程和方法：</p>
-<p>首先，选择 js 的 <a href="https://github.com/peachananr/onepage-scroll" target="_blank" rel="external">onepage-scroll</a> 框架。原因很简单，文件小，配置接口够用。当然，其实看懂原理以后可以自己写一个更简单，之前因为需求仅是上下翻页所以就自己参考着写了一个。</p>
-<p>然后，最蛋疼的切图和绝对定位你的内容，用 rem 做单位吧。哈哈，做过的人应该都知道的，血泪史。（欢迎有更好建议的同学来分享一下）</p>
-<p>最后，其实是我最想说的。手机端因为硬件的问题，渲染能力有限。建议写法如下，给当前页面一个 class 每次进来的时候加上，滑走就去除。所有的动画 css 都写到这个 class 下面。这样一来整个页面的速度就会好很多。</p>
-<p>另：加强交互的一个写法，进入页面写一个 loading 动画，预先将体积大的图片预先加载完成之后再进入页面。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/06/08/移动端页面的一点体会（一）/" data-id="cicov4zqj0000mejifx8eerr1" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
 
-
-  
-  
 </section>
         
           <aside id="sidebar">
